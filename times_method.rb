@@ -1,3 +1,4 @@
+# method implementation
 def times(number)
   counter = 0
   while counter < number do
@@ -8,6 +9,7 @@ def times(number)
   number
 end
 
-times(5) do |num|
+# method invocation
+times(5) do |num| # the |stuff| is the block local var
   puts num
 end
