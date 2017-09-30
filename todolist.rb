@@ -100,6 +100,17 @@ class TodoList
   def to_a
     @todos
   end
+
+  def each
+    counter = 0
+
+    while counter < @todos.size
+      yield(@todos[counter])
+      counter += 1
+    end
+
+    @todos
+  end
 end
 
 todo1 = Todo.new("Buy milk")
@@ -111,12 +122,4 @@ list.add(todo1)
 list.add(todo2)
 list.add(todo3)
 
-puts list
-
-list.pop
-
-puts list
-
-list.mark_done_at(1)
-
-puts list
+list.each { |todo| puts todo }
