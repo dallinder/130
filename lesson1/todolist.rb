@@ -40,10 +40,7 @@ class TodoList
     @todos << item
     @todos
   end
-
-  def <<(item)
-    add(item)
-  end
+  alias_method :<<, :add
 
   def size
     @todos.size
@@ -78,7 +75,7 @@ class TodoList
   end
 
   def remove_at(idx)
-    @todos.delete_at(idx)
+    @todos.delete(item_at(idx))
   end
 
   def done?
