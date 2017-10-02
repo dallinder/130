@@ -1,1 +1,1 @@
-assert_include('xyz', list)
+assert_includes(list, 'xyz')
