@@ -1,0 +1,1 @@
+assert('xyz', value.downcase)
